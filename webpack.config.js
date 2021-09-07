@@ -32,8 +32,20 @@ module.exports = {
         ]
       },
       {
+        // 이미지 파일 처리
         test: /\.(png|jpe?g|gif|svg)$/i, // 다음 확장자로 마치는 모든 파일
         type: "asset/resource"
+      },
+      {
+        // babel loader 처리
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"]
+          }
+        }
       }
     ]
   },
