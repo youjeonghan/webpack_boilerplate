@@ -1,4 +1,4 @@
-import "./index.css"; // css파일 불러오기
+import "./index.scss"; // css파일 불러오기
 
 function component() {
   const element = document.createElement("div");
